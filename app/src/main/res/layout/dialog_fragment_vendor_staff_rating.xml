@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragment_background"
+    android:orientation="vertical"
+    android:padding="24dp"
+    tools:context=".ui.helpdesk.vendor.VendorRatingsFragment">
+
+    <TextView
+        android:id="@+id/tv_vendor_staff_rating_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/title_dialog_vendor_rating"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/dialog_title_87"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_vendor_staff_rating_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:errorEnabled="true"
+        android:hint="@string/prompt_vendor_reviews_comments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vendor_staff_rating_dialog_title">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_et_vendor_staff_rating_comments"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:maxLines="5"
+            android:selectAllOnFocus="true"
+            android:textSize="16sp"
+            tools:text="" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_vendor_staff_rate_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-light"
+        android:padding="5dp"
+        android:textColor="@color/input_outbox_stroke"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_vendor_staff_rating_comments" />
+
+    <RatingBar
+        android:id="@+id/rating_vendor_staff"
+        style="@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:isIndicator="false"
+        android:progressTint="@color/colorPrimary"
+        android:stepSize="1"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_vendor_staff_rate_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_vendor_staff_rate_label" />
+
+    <Button
+        android:id="@+id/btn_vendor_staff_rating_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:layout_marginTop="16dp"
+        android:enabled="false"
+        android:text="@string/action_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rating_vendor_staff" />
+
+    <Button
+        android:id="@+id/btn_vendor_staff_rating_cancel"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/action_cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_vendor_staff_rating_submit"
+        app:layout_constraintEnd_toStartOf="@+id/btn_vendor_staff_rating_submit"
+        app:layout_constraintTop_toTopOf="@+id/btn_vendor_staff_rating_submit" />
+</androidx.constraintlayout.widget.ConstraintLayout>

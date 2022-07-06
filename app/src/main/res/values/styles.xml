@@ -1,0 +1,170 @@
+<resources>
+
+    <!-- Common AppTheme to be used -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/app_screen</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorButtonNormal">@android:color/white</item>
+        <item name="android:dialogTheme">@style/DialogFragmentTheme</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:scrollbarThumbVertical">@android:color/transparent</item>
+        <item name="editTextStyle">@style/AppTheme.EditText</item>
+        <item name="materialButtonStyle">@style/AppTheme.Button</item>
+        <item name="navigationViewStyle">@style/AppTheme.NavStyle</item>
+        <item name="drawerArrowStyle">@style/AppTheme.DrawerArrowStyle</item>
+        <item name="textInputStyle">@style/Widget.TextInputLayout.OutlinedBox</item>
+        <item name="android:homeAsUpIndicator">@drawable/avd_back_to_search</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+    </style>
+
+    <style name="AppTheme.SplashScreen" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="AppTheme.EditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/et_selector_background</item>
+        <item name="android:textColorHint">#9ea7b4</item>
+        <item name="android:textColor">#263742</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:drawablePadding">16dp</item>
+    </style>
+
+    <style name="AppTheme.Button" parent="Widget.MaterialComponents.Button">
+        <item name="materialThemeOverlay">@style/ThemeOverlayButton</item>
+        <item name="android:inset">0dp</item>
+        <item name="cornerRadius">5dp</item>
+    </style>
+
+    <style name="ThemeOverlayButton">
+        <item name="colorPrimary">@color/colorAccent</item>
+    </style>
+
+    <!--DialogFragment Style-->
+    <style name="DialogFragmentTheme" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="android:windowBackground">@drawable/dialog_fragment_background</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="materialButtonStyle">@style/AppTheme.Button</item>
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+        <item name="textInputStyle">@style/Widget.TextInputLayout.OutlinedBox</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in_dialog</item>
+        <item name="android:windowExitAnimation">@anim/fade_out_dialog</item>
+    </style>
+
+    <!--NavigationView Style-->
+    <style name="AppTheme.NavStyle" parent="Widget.Design.NavigationView">
+        <item name="elevation">0dp</item>
+        <item name="android:backgroundTint">@color/nav_view_bg</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="itemIconTint">@color/drawer_item_selector</item>
+        <item name="itemTextColor">@color/drawer_item_selector</item>
+    </style>
+
+    <!--DrawerArrowStyle-->
+    <style name="AppTheme.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@color/nav_view_bg</item>
+    </style>
+
+    <!-- Base style for TextInputLayout. -->
+    <style name="Widget.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeColor">@color/input_outbox_stroke</item>
+        <item name="boxBackgroundColor">@android:color/white</item>
+        <item name="hintTextColor">@color/input_outbox_stroke</item>
+        <item name="android:textColorHint">#B3263742</item>
+        <item name="android:textColor">@color/input_outbox_stroke</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- TextInputLayout Theme for Request Amenity Fragment-->
+    <style name="AppTheme.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeColor">@android:color/transparent</item>
+        <item name="android:textColor">@color/input_outbox_stroke</item>
+        <item name="errorEnabled">false</item>
+        <item name="hintEnabled">false</item>
+        <item name="hintAnimationEnabled">false</item>
+    </style>
+
+    // Search Styles
+
+    <style name="Ssms" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:editTextColor">@color/input_outbox_stroke</item>
+    </style>
+
+    <style name="SsmsDarkOverlay" parent="@android:style/ThemeOverlay.Material.Dark.ActionBar">
+        <!-- Used to theme dark elements in light themed screens.
+             Extend the material dark Action Bar overlay as this contains text styling. -->
+    </style>
+
+    <style name="SearchViewTheme" parent="SsmsDarkOverlay">
+        <item name="colorControlActivated">?android:colorAccent</item>
+        <item name="android:searchViewStyle">@style/Widget.Ssms.SearchView</item>
+    </style>
+
+    <style name="Widget.Ssms.SearchView" parent="android:style/Widget.Material.SearchView">
+        <item name="android:searchIcon">@android:color/transparent</item>
+        <item name="android:queryBackground">@android:color/transparent</item>
+        <item name="android:submitBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="Ssms.Search">
+        <item name="android:windowSharedElementEnterTransition">@transition/search_shared_enter
+        </item>
+        <item name="android:windowSharedElementReturnTransition">@transition/search_shared_return
+        </item>
+    </style>
+
+    <!--BottomSheetDialog-->
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="cornerSizeTopLeft">20dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="AppTheme.DateTimePickerTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:buttonBarNegativeButtonStyle">
+            @style/DatePickerTheme.ButtonBarNegativeButtonStyle
+        </item>
+        <item name="android:buttonBarPositiveButtonStyle">
+            @style/DatePickerTheme.ButtonBarPositiveButtonStyle
+        </item>
+    </style>
+
+    <style name="DatePickerTheme.ButtonBarNegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/indigo_700</item>
+    </style>
+
+    <style name="DatePickerTheme.ButtonBarPositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/indigo_700</item>
+    </style>
+</resources>

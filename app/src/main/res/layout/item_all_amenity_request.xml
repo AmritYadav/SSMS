@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="androidx.core.text.HtmlCompat" />
+        <variable
+            name="allRequest"
+            type="com.sts.ssms.ui.helpdesk.amenity.model.AllAmenityRequest" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:contentPadding="@dimen/activity_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/amenity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{allRequest.amenityName}"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Football" />
+
+            <TextView
+                android:id="@+id/booking_from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{HtmlCompat.fromHtml(@string/placeholder_booking_from(allRequest.bookingFrom), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/amenity"
+                tools:text="Booking From: " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/content"
+                android:text="@{HtmlCompat.fromHtml(@string/placeholder_booking_to(allRequest.bookingTo), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/booking_from"
+                tools:text="Booking To: " />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,30 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="433dp"
+    android:height="433dp"
+    android:viewportWidth="433"
+    android:viewportHeight="433.048">
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="m171.078,80h-6.109l-16,32h38.109zM171.078,80"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="m168.023,152c13.254,0 24,-10.746 24,-24h-48c0,13.254 10.746,24 24,24zM168.023,152"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="m312.023,392h-120v24h156.258c-16.344,-18.203 -16.344,-45.797 0,-64h-260.258c-17.672,0 -32,14.328 -32,32s14.328,32 32,32h40v-24h-48c-4.418,0 -8,-3.582 -8,-8s3.582,-8 8,-8h232c4.418,0 8,3.582 8,8s-3.582,8 -8,8zM312.023,392"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="m315.078,80h-6.109l-16,32h38.109zM315.078,80"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="m144.023,392v41.047l16,-10.664 16,10.664v-41.047zM144.023,392"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="m376.023,0h-280v336h280zM336.023,304h-192v-16h192zM336.023,272h-192v-16h192zM352.023,80h-19.055l18.254,36.426h-0.078c0.574,1.102 0.875,2.328 0.879,3.574v8c0,22.09 -17.906,40 -40,40 -22.09,0 -40,-17.91 -40,-40v-8c0.023,-1.238 0.34,-2.453 0.922,-3.543h-0.082l18.215,-36.457h-43.055v144h32v16h-80v-16h32v-144h-43.055l18.254,36.426h-0.078c0.574,1.102 0.875,2.328 0.879,3.574v8c0,22.09 -17.906,40 -40,40 -22.09,0 -40,-17.91 -40,-40v-8c0.023,-1.238 0.34,-2.453 0.922,-3.543h-0.082l18.215,-36.457h-19.055c-4.418,0 -8,-3.582 -8,-8s3.582,-8 8,-8h104v-16c0,-4.418 3.582,-8 8,-8 4.418,0 8,3.582 8,8v16h104c4.418,0 8,3.582 8,8s-3.582,8 -8,8zM352.023,80"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="m56.023,348.246c6.754,-6.031 15.074,-10.027 24,-11.535v-333.32c-14.559,6.355 -23.98,20.723 -24,36.609zM56.023,348.246"/>
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="m312.023,152c13.254,0 24,-10.746 24,-24h-48c0,13.254 10.746,24 24,24zM312.023,152"/>
+</vector>

@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default app_screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_margin">16dp</dimen>
+
+    <dimen name="button_height">58dp</dimen>
+    <dimen name="drawer_button_height">36dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+
+    <dimen name="notification_badge_text">10sp</dimen>
+
+    <!-- Z-axis elevations -->
+    <dimen name="z_app_bar">4dp</dimen>
+
+    <!-- standard metrics -->
+    <dimen name="padding_micro">4dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+
+    <!--  Custom Calendar metrics  -->
+    <dimen name="month_text_size">22sp</dimen>
+    <dimen name="medium_margin">8dp</dimen>
+    <dimen name="normal_margin">12dp</dimen>
+    <dimen name="smaller_text_size">11sp</dimen>
+    <dimen name="normal_text_size">14sp</dimen>
+
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/label_request_amenity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/activity_margin"
+        android:text="@string/title_request_amenity"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="@color/header" />
+
+    <Button
+        android:id="@+id/amenity_category"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Dialog.Flush"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="38dp"
+        android:backgroundTint="#EEEEEE"
+        android:drawableEnd="@drawable/ic_arrow_down"
+        android:gravity="start|center_vertical"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:singleLine="true"
+        android:text="@string/prompt_amenity_category"
+        android:textAllCaps="false"
+        android:textColor="@color/input_outbox_stroke"
+        app:cornerRadius="20dp" />
+
+    <View
+        android:id="@+id/view_div_title"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/tab_background_dark_300" />
+
+    <RelativeLayout
+        android:id="@+id/monthly_charges_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_monthly_charges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Monthly Charges"
+            android:textColor="@color/header"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/monthly_charges"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_monthly_charges"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/tv_drawable_monthly_charge"
+            android:inputType="none"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/booking_date_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_div_title">
+
+        <ImageView
+            android:id="@+id/amenity_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/ic_amenity_booking_date"
+            app:layout_constraintEnd_toStartOf="@+id/booking_date_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/booking_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Booking Dates"
+            android:textColor="@color/header"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/amenity_booking"
+            app:layout_constraintStart_toEndOf="@+id/amenity_booking"
+            app:layout_constraintTop_toTopOf="@+id/amenity_booking" />
+
+        <TextView
+            android:id="@+id/start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/content"
+            app:layout_constraintStart_toStartOf="@id/booking_date_label"
+            app:layout_constraintTop_toBottomOf="@+id/amenity_booking"
+            tools:text="13-05-2020" />
+
+        <TextView
+            android:id="@+id/start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/content"
+            app:layout_constraintBottom_toBottomOf="@+id/start_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/start_date"
+            tools:text="6:30 PM" />
+
+        <TextView
+            android:id="@+id/end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/content"
+            app:layout_constraintStart_toStartOf="@+id/booking_date_label"
+            app:layout_constraintTop_toBottomOf="@+id/start_date"
+            tools:text="13-05-2020" />
+
+        <TextView
+            android:id="@+id/end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:textColor="@color/content"
+            app:layout_constraintBottom_toBottomOf="@+id/end_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/end_date"
+            tools:text="7:30 PM" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/save_amenity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:enabled="false"
+        android:text="@string/prompt_save" />
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.versions = [
+            'compileSdk'       : 29,
+            'minSdk'           : 21,
+            'targetSdk'        : 29,
+            'buildTools'       : '29.0.2',
+            'kotlin'           : '1.4.10',
+            'appcompat'        : '1.2.0',
+            'swipeToRefresh'   : '1.1.0',
+            'paging'           : '2.1.2',
+            'lifecycle'        : '2.2.0',
+            'coreKtx'          : '1.3.2',
+            'coroutines'       : '1.3.0',
+            'koin'             : '2.1.3',
+            'constraintlayout' : '2.0.2',
+            'retrofit'         : '2.9.0',
+            'okhttp'           : '4.9.0',
+            'glide'            : '4.11.0',
+            'material'         : '1.2.1',
+            'room'             : '2.2.5',
+            'navigation'       : '2.3.1',
+            'gradle'           : '4.0.1',
+            'jodaTime'         : '2.10.6',
+            'duolingoViewPager': '2.0.0',
+            'jFrogGradle'      : '1.8.4'
+    ]
+
+    ext.names = [
+            'applicationId': 'com.sts.ssms'
+    ]
+
+    repositories {
+        google()
+        jcenter()
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:${versions.gradle}"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
+        // Required for Duolingo RTL ViewPager
+        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:${versions.jFrogGradle}"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

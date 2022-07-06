@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ToggleButton
+        android:id="@+id/toggle_post_like"
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/like_unlike_conversation_selector"
+        android:checked="false"
+        android:text=""
+        android:textOff=""
+        android:textOn="" />
+
+    <TextView
+        android:id="@+id/tv_total_likes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        tools:text="0"
+        android:textColor="@color/header"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_total_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:drawableStart="@drawable/ic_comment"
+        android:drawablePadding="8dp"
+        tools:text="7"
+        android:textColor="@color/header"
+        android:textSize="16sp" />
+</LinearLayout>

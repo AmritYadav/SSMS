@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="com.sts.ssms.data.common.LoadingState" />
+
+        <variable
+            name="profileViewModel"
+            type="com.sts.ssms.ui.helpdesk.profile.viewmodel.ProfileViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fragment_background">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh"
+            android:layout_marginTop="@dimen/activity_margin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.helpdesk.HelpDeskActivity">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ll_profile_top_details"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_profile_avatar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="@dimen/activity_margin"
+                    app:src="@{profileViewModel.profile.avatar}"
+                    app:circleCrop="@{true}"
+                    android:scaleType="centerCrop"
+                    tools:src="@mipmap/ic_launcher_round"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintWidth_percent="0.25"
+                    tools:ignore="ContentDescription" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_profile_change_password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/action_change_password"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_profile_switch_society"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_profile_avatar" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_profile_switch_society"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/action_switch_society"
+                    android:textAllCaps="false"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btn_profile_change_password"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/btn_profile_change_password"
+                    app:layout_constraintTop_toTopOf="@+id/btn_profile_change_password" />
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nsv_profile_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:fillViewport="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btn_profile_change_password">
+
+                    <include
+                        layout="@layout/layout_profile_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:profile="@{profileViewModel}" />
+
+                </androidx.core.widget.NestedScrollView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <ProgressBar
+            android:id="@+id/progress_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="@{profileViewModel.loading == LoadingState.LOADING ? View.VISIBLE : View.GONE}" />
+    </FrameLayout>
+</layout>

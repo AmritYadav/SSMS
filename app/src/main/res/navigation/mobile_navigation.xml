@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_amenity">
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.sts.ssms.ui.helpdesk.dashboard.DashboardFragment"
+        android:label="@string/menu_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/nav_conversations"
+        android:name="com.sts.ssms.ui.helpdesk.conversations.PostListFragment"
+        android:label="@string/menu_conversations"
+        tools:layout="@layout/fragment_post" />
+
+    <fragment
+        android:id="@+id/nav_my_flat"
+        android:name="com.sts.ssms.ui.helpdesk.myflat.MyFlatFragment"
+        android:label="@string/menu_my_flat"
+        tools:layout="@layout/fragment_my_flat" />
+
+    <fragment
+        android:id="@+id/nav_vendor_management"
+        android:name="com.sts.ssms.ui.helpdesk.vendor.VendorsFragment"
+        android:label="@string/menu_vendor_management"
+        tools:layout="@layout/fragment_vendor_staff" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.sts.ssms.ui.helpdesk.profile.ProfileFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_payment_details"
+        android:name="com.sts.ssms.ui.helpdesk.paymentdetails.PaymentDetailsFragment"
+        android:label="@string/menu_payment_details"
+        tools:layout="@layout/fragment_payment_details" />
+
+    <fragment
+        android:id="@+id/nav_vendor_details"
+        android:name="com.sts.ssms.ui.helpdesk.vendor.VendorDetailsFragment"
+        android:label="@string/title_vendor_details"
+        tools:layout="@layout/fragment_vendor_details">
+        <action
+            android:id="@+id/action_vendorDetailsFragment_to_nav_vendor_management"
+            app:destination="@id/nav_vendor_management"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_vendor_management"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_staff_management"
+        android:name="com.sts.ssms.ui.helpdesk.staff.StaffFragment"
+        android:label="@string/menu_staff_management"
+        tools:layout="@layout/fragment_vendor_staff" />
+
+    <fragment
+        android:id="@+id/nav_staff_details"
+        android:name="com.sts.ssms.ui.helpdesk.staff.StaffDetailsFragment"
+        android:label="@string/title_staff_details"
+        tools:layout="@layout/fragment_staff_details">
+        <action
+            android:id="@+id/action_nav_staff_details_to_nav_staff_management"
+            app:destination="@id/nav_staff_management"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_staff_management"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_dashboard_details"
+        android:name="com.sts.ssms.ui.helpdesk.dashboard.DashboardDetailFragment"
+        android:label="@string/title_ticket_details"
+        tools:layout="@layout/fragment_dashboard_detail">
+        <action
+            android:id="@+id/action_dashboardDetailFragment_to_nav_dashboard"
+            app:destination="@id/nav_dashboard"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_dashboard"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.sts.ssms.ui.helpdesk.notification.NotificationFragment"
+        android:label="@string/title_notification"
+        tools:layout="@layout/fragment_notification" />
+
+    <fragment
+        android:id="@+id/nav_amenity"
+        android:name="com.sts.ssms.ui.helpdesk.amenity.AmenityMainFragment"
+        android:label="@string/menu_request_amenity"
+        tools:layout="@layout/fragment_amenity_main" >
+        <action
+            android:id="@+id/action_nav_amenity_to_myRequestedAmenityFragment"
+            app:destination="@id/myRequestedAmenityFragment"
+            app:popUpTo="@id/nav_amenity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_documents"
+        android:name="com.sts.ssms.ui.helpdesk.documents.DocumentsFragment"
+        android:label="@string/menu_documents"
+        tools:layout="@layout/fragment_documents" />
+
+    <fragment
+        android:id="@+id/nav_society_events"
+        android:name="com.sts.ssms.ui.helpdesk.societyevent.SocietyEventFragment"
+        android:label="@string/menu_society_events"
+        tools:layout="@layout/fragment_society_event" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.sts.ssms.ui.helpdesk.photogallery.PhotoGalleryFragment"
+        android:label="@string/menu_photo_gallery"
+        tools:layout="@layout/fragment_photo_gallery">
+        <action
+            android:id="@+id/action_nav_gallery_to_nav_album"
+            app:destination="@id/nav_album"
+            app:popUpTo="@id/nav_gallery" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_album"
+        android:name="com.sts.ssms.ui.helpdesk.photogallery.AlbumFragment"
+        android:label="AlbumFragment"
+        tools:layout="@layout/fragment_album" />
+    <fragment
+        android:id="@+id/nav_features"
+        android:name="com.sts.ssms.ui.helpdesk.features.FeatureFragment"
+        android:label="@string/menu_features"
+        tools:layout="@layout/fragment_feature" />
+
+    <fragment
+        android:id="@+id/nav_bye_laws"
+        android:name="com.sts.ssms.ui.helpdesk.bylaws.ByLawsFragment"
+        android:label="@string/menu_bye_laws"
+        tools:layout="@layout/fragment_by_laws" />
+    <fragment
+        android:id="@+id/nav_notice_board"
+        android:name="com.sts.ssms.ui.helpdesk.noticeboard.NoticeBoardFragment"
+        android:label="@string/menu_notice_board"
+        tools:layout="@layout/fragment_notice_board">
+        <action
+            android:id="@+id/action_nav_notice_board_to_noticeDetailsFragment2"
+            app:destination="@id/noticeDetailsFragment"
+            app:popUpTo="@id/nav_notice_board" />
+    </fragment>
+    <fragment
+        android:id="@+id/noticeDetailsFragment"
+        android:name="com.sts.ssms.ui.helpdesk.noticeboard.NoticeDetailsFragment"
+        android:label="@string/title_notice_details"
+        tools:layout="@layout/fragment_notice_details" />
+    <fragment
+        android:id="@+id/nav_official_communication"
+        android:name="com.sts.ssms.ui.helpdesk.officialcommunication.OfficialCommunicationFragment"
+        android:label="@string/menu_official_communication"
+        tools:layout="@layout/fragment_official_communication">
+        <action
+            android:id="@+id/action_nav_official_communication_to_commDetailFragment"
+            app:destination="@id/commDetailFragment"
+            app:popUpTo="@id/nav_official_communication" />
+    </fragment>
+    <fragment
+        android:id="@+id/commDetailFragment"
+        android:name="com.sts.ssms.ui.helpdesk.officialcommunication.CommDetailFragment"
+        android:label="@string/title_official_comm_details"
+        tools:layout="@layout/fragment_comm_details" />
+    <fragment
+        android:id="@+id/myRequestedAmenityFragment"
+        android:name="com.sts.ssms.ui.helpdesk.amenity.AmenityMyRequestFragment"
+        android:label="@string/title_my_requested_amenity"
+        tools:layout="@layout/fragment_amenity_my_request" />
+</navigation>

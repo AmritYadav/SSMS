@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="androidx.core.text.HtmlCompat" />
+
+        <import type="android.view.View" />
+
+        <variable
+            name="amenity"
+            type="com.sts.ssms.ui.helpdesk.amenity.model.MyAmenity" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/booking_details_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/charges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@{HtmlCompat.fromHtml(@string/placeholder_charges(amenity.monthlyCharges), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+            android:textColor="@color/header"
+            tools:text="Charges: 500" />
+
+        <TextView
+            android:id="@+id/approval_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{HtmlCompat.fromHtml(@string/placeholder_approval_status(amenity.approvalStatus), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+            android:textColor="@color/header"
+            tools:text="Approval Status: Disapproved" />
+
+        <TextView
+            android:id="@+id/from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{HtmlCompat.fromHtml(@string/placeholder_booking_from(amenity.from), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+            android:textColor="@color/header"
+            android:visibility="@{amenity.from.empty ? View.GONE : View.VISIBLE}"
+            tools:text="From: 18-06-2020 03:30 PM" />
+
+        <TextView
+            android:id="@+id/to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{HtmlCompat.fromHtml(@string/placeholder_booking_to(amenity.to), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+            android:textColor="@color/header"
+            android:visibility="@{amenity.to.empty ? View.GONE : View.VISIBLE}"
+            tools:text="To: 18-06-2020 08:30 PM" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="androidx.core.text.HtmlCompat" />
+
+        <variable
+            name="staffModel"
+            type="com.sts.ssms.ui.helpdesk.staff.model.StaffUiModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_staff_details_avatar"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_profile_placeholder"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staffModel.name}"
+            android:textColor="@color/header"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_staff_details_contact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_staff_details_avatar"
+            app:layout_constraintTop_toTopOf="@+id/iv_staff_details_avatar"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{HtmlCompat.fromHtml(@string/staff_details_contact(staffModel.phoneNumber), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+            android:textColor="@color/input_outbox_stroke"
+            app:layout_constraintBottom_toTopOf="@+id/tv_staff_details_dob"
+            app:layout_constraintStart_toStartOf="@+id/tv_staff_details_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_name" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{HtmlCompat.fromHtml(@string/staff_details_dob(staffModel.dob), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+            android:textColor="@color/input_outbox_stroke"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_staff_details_avatar"
+            app:layout_constraintStart_toStartOf="@+id/tv_staff_details_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_contact" />
+
+        <include
+            layout="@layout/layout_staff_details_sub_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/iv_staff_details_avatar"
+            app:staff="@{staffModel}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

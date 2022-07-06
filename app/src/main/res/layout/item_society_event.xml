@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="androidx.core.text.HtmlCompat" />
+        <variable
+            name="societyEvent"
+            type="com.sts.ssms.ui.helpdesk.societyevent.model.SocietyEvent" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:contentPadding="@dimen/activity_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_society_event_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{societyEvent.title}"
+                android:textColor="@color/header"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Society Event" />
+
+            <TextView
+                android:id="@+id/tv_event_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{HtmlCompat.fromHtml(@string/placeholder_created_on(societyEvent.date), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/content"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_society_event_name"
+                tools:text="20-12-2020" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

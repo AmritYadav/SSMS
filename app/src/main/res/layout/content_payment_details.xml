@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_payment_details_container"
+    android:padding="12dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_date"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/input_outbox_stroke"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_payment_bill_date_val"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_payment_bill_date_val" />
+
+    <TextView
+        android:id="@+id/tv_payment_bill_date_val"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view_date"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/tab_background_dark_300"
+        app:layout_constraintTop_toBottomOf="@+id/tv_payment_bill_date_val" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/prompt_due_date"
+        android:textStyle="bold"
+        android:textColor="@color/input_outbox_stroke"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_payment_due_date_val"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_payment_due_date_val" />
+
+    <TextView
+        android:id="@+id/tv_payment_due_date_val"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/view_date" />
+
+    <View
+        android:id="@+id/view_due_date"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/tab_background_dark_300"
+        app:layout_constraintTop_toBottomOf="@+id/tv_payment_due_date_val" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_payment_date"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/input_outbox_stroke"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_payment_date_val"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_payment_date_val" />
+
+    <TextView
+        android:id="@+id/tv_payment_date_val"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/view_due_date" />
+
+    <View
+        android:id="@+id/view_payment_date"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/tab_background_dark_300"
+        app:layout_constraintTop_toBottomOf="@+id/tv_payment_date_val" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/prompt_payment_mode"
+        android:textStyle="bold"
+        android:textColor="@color/input_outbox_stroke"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_payment_mode_val"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_payment_mode_val" />
+
+    <TextView
+        android:id="@+id/tv_payment_mode_val"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/view_payment_date" />
+
+    <View
+        android:id="@+id/view_mode"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/tab_background_dark_300"
+        app:layout_constraintTop_toBottomOf="@+id/tv_payment_mode_val" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/prompt_instrument_number"
+        android:textStyle="bold"
+        android:textColor="@color/input_outbox_stroke"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_payment_instrument_no_val"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_payment_instrument_no_val" />
+
+    <TextView
+        android:id="@+id/tv_payment_instrument_no_val"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:layout_marginTop="5dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/view_mode" />
+</androidx.constraintlayout.widget.ConstraintLayout>

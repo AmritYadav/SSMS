@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="androidx.core.text.HtmlCompat" />
+
+        <variable
+            name="comm"
+            type="com.sts.ssms.ui.helpdesk.officialcommunication.models.Communication" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:contentPadding="@dimen/activity_margin">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/letter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comm_letter"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/letter_to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin"
+                android:text="@{HtmlCompat.fromHtml(@string/placeholder_letter_to(comm.to), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/letter"
+                tools:text="To: XYZ" />
+
+            <View
+                android:id="@+id/to_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/tab_background_dark_300"
+                app:layout_constraintTop_toBottomOf="@+id/letter_to" />
+
+            <TextView
+                android:id="@+id/letter_by"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{HtmlCompat.fromHtml(@string/placeholder_letter_by(comm.createdBy), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/to_divider"
+                tools:text="By: XYZ" />
+
+            <View
+                android:id="@+id/by_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/tab_background_dark_300"
+                app:layout_constraintTop_toBottomOf="@+id/letter_by" />
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{HtmlCompat.fromHtml(@string/placeholder_letter_subject(comm.subject), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/by_divider"
+                tools:text="Subject: Letter subject to be displayed here" />
+
+            <View
+                android:id="@+id/subject_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/tab_background_dark_300"
+                app:layout_constraintTop_toBottomOf="@+id/subject" />
+
+            <TextView
+                android:id="@+id/email_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="@{HtmlCompat.fromHtml(@string/placeholder_text(comm.emailContent), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/subject_divider"
+                tools:text="Text: Email Context goes here" />
+
+            <View
+                android:id="@+id/email_content_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/tab_background_dark_300"
+                app:layout_constraintTop_toBottomOf="@+id/email_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@{HtmlCompat.fromHtml(@string/placeholder_created_on(comm.createdOn), HtmlCompat.FROM_HTML_MODE_LEGACY)}"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_content_divider"
+                tools:text="Created on: 18-05-2020" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

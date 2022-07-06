@@ -1,0 +1,289 @@
+<resources>
+
+    <string name="app_name">SSMS</string>
+    <string name="welcome">"Welcome !"</string>
+
+    // Common
+    <string name="prompt_registered_email">Registered Email</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="prompt_save">Save</string>
+    <string name="label_created_on">Created on:</string>
+    <string name="label_created_by">Created by:</string>
+    <string name="label_description">Description</string>
+    <string name="placeholder_by">&lt;b>By:&lt;/b>&#160;%1$s</string>
+    <string name="placeholder_created_on">&lt;b>Created on:&lt;/b>&#160;%1$s</string>
+    <string name="placeholder_expire_date">&lt;b>Expire date:&lt;/b>&#160;%1$s</string>
+    <string name="prompt_comments">Comment(s)</string>
+
+    // Login
+    <string name="invalid_user_id">Not a valid email</string>
+    <string name="prompt_password">Password</string>
+    <string name="invalid_password">Password must be at least 6 characters</string>
+    <string name="ssms_login_welcome">Welcome to\n
+        <b>Sahakar Society Management System</b>
+    </string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_dialog_forgot_password">
+        <u>Forgot Password?</u>
+    </string>
+
+    // ForgotPassword Dialog
+    <string name="title_dialog_forgot_password">Forgot Password</string>
+    <string name="action_dialog_send_otp">Send Otp</string>
+
+    // VerifyOTP Dialog
+    <string name="title_dialog_verify_otp">Verify OTP</string>
+    <string name="prompt_enter_otp">One Time Password</string>
+    <string name="action_dialog_verify_otp">Verify</string>
+    <string name="action_dialog_resend_otp"><u>Resend OTP</u></string>
+
+    // Reset &amp; Change Password Dialog
+    <string name="title_dialog_reset_password">Reset Password</string>
+    <string name="title_dialog_change_password">Change Password</string>
+    <string name="prompt_current_password">Current Password</string>
+    <string name="prompt_new_password">New Password</string>
+    <string name="prompt_confirm_password">Confirm Password</string>
+    <string name="action_dialog_update_password">Update</string>
+    <string name="old_new_pwd_match_error">Old and New password cannot be same</string>
+    <string name="unmatched_new_confirm_password">New password does not match with confirm password!</string>
+
+    // Drawer Menu
+    <string name="menu_profile">My Profile</string>
+    <string name="menu_dashboard">HelpDesk</string>
+    <string name="menu_conversations">Conversations</string>
+    <string name="menu_my_flat">My Flat</string>
+    <string name="menu_request_amenity">Request Amenity</string>
+    <string name="menu_documents">Documents</string>
+    <string name="menu_photo_gallery">Photo Gallery</string>
+    <string name="menu_notice_board">Notice Board</string>
+    <string name="menu_society_events">Society Events</string>
+    <string name="menu_vendor_management">Vendor Management</string>
+    <string name="menu_staff_management">Staff Management</string>
+    <string name="menu_official_communication">Official Communication</string>
+    <string name="menu_payment_details">Payment Details</string>
+    <string name="menu_features">Features</string>
+    <string name="menu_bye_laws">Bye Laws</string>
+
+    <string name="sign_out">Log out</string>
+    <string name="action_submit">Submit</string>
+
+    // Profile
+    <string name="prompt_first_name">First Name</string>
+    <string name="prompt_last_name">Last Name</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_phone_number">Phone Number</string>
+    <string name="prompt_dob">DOB</string>
+    <string name="prompt_aadhaar_card">Aadhaar Card</string>
+    <string name="prompt_pan_card">PAN Card</string>
+    <string name="prompt_voter_id">Voter ID</string>
+    <string name="action_change_password">Change Password</string>
+    <string name="action_switch_society">Switch Society</string>
+
+    // Dashboard
+    <string name="action_filter_tickets">Filter Tickets</string>
+    <string name="tab_flat_owner">Owners</string>
+    <string name="tab_flat_tenant">Tenant</string>
+    <string name="retry">Retry</string>
+    <string name="flat">&lt;b>Flat:&lt;/b>&#160;%1$s</string>
+    <string name="ticket_status">&lt;b>Status:&lt;/b>&#160;%1$s</string>
+    <string name="action_comment">Comment</string>
+    <string name="prompt_comment_here">minimum 6 characters</string>
+
+    // Dashboard Details
+    <string name="ticket_details_flat">Flat:</string>
+    <string name="ticket_details_status">Status:</string>
+    <string name="ticket_details_urgent">Urgent:</string>
+    <string name="ticket_details_issue">Issue</string>
+    <string name="title_ticket_details">Ticket Details</string>
+    <string name="ticket_empty_state_msg">No ticket(s) found</string>
+
+    // Dashboard Filter Menu
+    <string name="menu_action_all">All</string>
+    <string name="menu_action_open">Open</string>
+    <string name="menu_action_closed">Closed</string>
+    <string name="ticket_filter_option">%1$s&#160;Ticket(s)</string>
+
+    // Conversation
+    <string name="title_dialog_new_conversation">New Conversation</string>
+    <string name="prompt_title">Title</string>
+    <string name="prompt_description">Description</string>
+    <string name="prompt_comment">minimum 5 characters</string>
+    <string name="action_conversation_post">Post</string>
+    <string name="action_conversation_reply">Reply</string>
+    <string name="invalid_new_post_title">Title should contain at least 5 characters</string>
+    <string name="invalid_new_post_desc">Description should contain at least 5 characters</string>
+    <string name="prompt_empty_conversation">No Conversation(s) Found</string>
+
+    // Payment Details
+    <string name="payment_bill">&lt;b>Bill: &lt;/b>%1$s</string>
+    <string name="prompt_date">Date:</string>
+    <string name="prompt_due_date">Due Date:</string>
+    <string name="prompt_payment_date">Payment Date:</string>
+    <string name="prompt_payment_mode">Payment Mode:</string>
+    <string name="prompt_instrument_number">Instrument Number:</string>
+    <string name="prompt_empty_payment">No Payment(s) Found</string>
+
+    // MyFlat
+    <string name="flat_member_dob">&lt;b>BirthDate:&lt;/b>  %1$s</string>
+    <string name="flat_member_contact_no">&lt;b>Contact No:&lt;/b>  %1$s</string>
+    <string name="flat_member_relation">Relation:</string>
+    <string name="flat_member_aadhaar">Aadhaar Card:</string>
+    <string name="flat_member_pan">PAN Card:</string>
+    <string name="flat_member_voter">Voter Id:</string>
+    <string name="flat_member_email">Email:</string>
+    <string name="flat_member_associate">Associate Member:</string>
+    <string name="flat_member_photo_approval">Photo Approval Status:</string>
+    <string name="flat_empty_msg">No %1$s Found!!</string>
+
+    <string name="menu_notification">Notifications</string>
+
+    // Vendor &amp; Staff
+    <string name="vendor_staff_category">&lt;b>Category:&lt;/b>&#160;%1$s</string>
+    <string name="vendor_staff_phone">&lt;b>Phone:&lt;/b>&#160;%1$s</string>
+    <string name="vendor_staff_status">&lt;b>Status:&lt;/b>&#160;%1$s</string>
+    <string name="prompt_no_ratings">No Rating(s)</string>
+    <string name="prompt_empty_Vendor">No Vendor(s) found</string>
+
+    // Vendor Details
+    <string name="title_dialog_vendor_rating">Review and Comment</string>
+    <string name="title_vendor_details">Vendor Details</string>
+
+    <string name="vendor_details_category">Category</string>
+    <string name="vendor_details_contact">Contact No.</string>
+    <string name="vendor_details_website">Website</string>
+    <string name="vendor_details_email">Email Id</string>
+    <string name="vendor_details_rating">Overall Rating</string>
+    <string name="vendor_details_status">Status</string>
+    <string name="vendor_details_info">Info</string>
+
+    <string name="action_add_rating_comment">Add/Edit Rating &amp; Review</string>
+    <string name="action_search">Search</string>
+
+    <string name="prompt_vendor_reviews_comments">Vendor Rating &amp; Comments</string>
+    <string name="prompt_vendor_rating">Rating<![CDATA[<font color=#f44336>*</font>]]></string>
+    <string name="prompt_vendor_rating_comment">Ratings &amp; Comments</string>
+
+    <string name="invalid_comment">Comment should contain at least 2 characters</string>
+    <string name="invalid_rating">Minimum rating is 1</string>
+
+    // Search
+    <string name="transition_search_back" translatable="false">transition_search_back</string>
+    <string name="prompt_search_default">Search Here</string>
+    <string name="prompt_search_vendor">Search by Vendor Name</string>
+    <string name="prompt_search_staff">Search by Staff Name, Email and PhoneNumber</string>
+    <string name="prompt_search_ticket">Search issues</string>
+    <string name="prompt_search_all_amenity_request">Search Amenity by name or date(dd-MM-yyyy)</string>
+    <string name="empty_search_message">No Result(s) Found</string>
+    <string name="prompt_search_communication">Search by Communication Title</string>
+
+    // Staff
+    <string name="title_staff_details">Staff Details</string>
+    <string name="staff_details_contact"><![CDATA[<b>Contact No:</b>]]>&#160;%1$s</string>
+    <string name="staff_details_dob"><![CDATA[<b>Birth Date:</b>]]>&#160;%1$s</string>
+    <string name="prompt_staff_working_at">Working at</string>
+    <string name="prompt_staff_document">Documents</string>
+    <string name="prompt_empty_document">No Document(s)</string>
+    <string name="prompt_working_at_not_mentioned">No Mentioned</string>
+    <string name="prompt_empty_staff">No Staff(s) Found</string>
+
+    // Staff Details
+    <string name="prompt_type">Type:</string>
+    <string name="prompt_created_by">Created By:</string>
+    <string name="prompt_belongs_to_society">Belongs to:</string>
+    <string name="prompt_gender">Gender:</string>
+    <string name="prompt_nationality">Nationality:</string>
+    <string name="prompt_address">Address:</string>
+    <string name="prompt_qualification">Qualification:</string>
+    <string name="prompt_skills">Skills:</string>
+    <string name="prompt_languages_known">Languages Known:</string>
+    <string name="prompt_first_reference">First Reference:</string>
+    <string name="prompt_second_reference">Second Reference:</string>
+    <string name="prompt_staff_aadhaar_card">Aadhaar Card:</string>
+    <string name="prompt_staff_pan_card">PAN Card:</string>
+    <string name="prompt_staff_description">Description:</string>
+
+    // Permission Dialog
+    <string name="title_permission_write_storage_dialog">Storage Permission Required</string>
+    <string name="permission_write_storage_message">SSMS need phone storage permission to download and save your PDF/other file formats</string>
+    <string name="permission_write_storage_message_1">Without this permission, the SSMS app will not be able to download and save your documents. Goto Settings to enable the permission</string>
+
+    // Document Download
+    <string name="document_download_msg">"Download Started. Check your notification for progress</string>
+
+    // Notification
+    <string name="title_notification">Notifications</string>
+
+    // Society
+    <string name="prompt_society_list">Society List</string>
+
+    <!--Calendar-->
+    <string name="january">January</string>
+    <string name="february">February</string>
+    <string name="march">March</string>
+    <string name="april">April</string>
+    <string name="may">May</string>
+    <string name="june">June</string>
+    <string name="july">July</string>
+    <string name="august">August</string>
+    <string name="september">September</string>
+    <string name="october">October</string>
+    <string name="november">November</string>
+    <string name="december">December</string>
+
+    <!--Request Amenity-->
+    <string name="tab_all_request">All Request</string>
+    <string name="tab_my_request">My Request</string>
+    <string name="tab_amenities">Amenities</string>
+    <string name="title_request_amenity">Amenity Request</string>
+    <string name="title_my_requested_amenity">Requested Amenities</string>
+    <string name="prompt_empty_state_amenity">No Amenity(s)</string>
+    <string name="action_my_request">My Request</string>
+    <string name="prompt_booking_details">Booking Details</string>
+    <string name="placeholder_charges">&lt;b>Charges:&lt;/b>&#160;%1$s</string>
+    <string name="placeholder_approval_status">&lt;b>Approval Status:&lt;/b>&#160;%1$s</string>
+    <string name="placeholder_booking_from">&lt;b>From:&lt;/b>&#160;%1$s</string>
+    <string name="placeholder_booking_to">&lt;b>To:&lt;/b>&#160;%1$s</string>
+    <string name="prompt_amenity_category">Select amenity category</string>
+    <string name="booking_start_date_error">Start Date cannot be greater then End Date</string>
+    <string name="booking_start_time_error">Start Time cannot be greater then End Time</string>
+
+    <!--Society Event-->
+    <string name="prompt_suggest_event_name">Activity Name</string>
+    <string name="title_suggest_activity">Suggest Activity</string>
+    <string name="prompt_empty_society_event">No Event(s) Found</string>
+
+    <!--Photo Gallery-->
+    <string name="title_photo_gallery">Photo Gallery</string>
+    <string name="title_Albums">Albums</string>
+    <string name="prompt_search_album">Search album</string>
+    <string name="prompt_empty_albums">No Album(s) Found!!!</string>
+    <string name="prompt_empty_photos">No Photo(s) Found!!!</string>
+
+    <!--Notice Board-->
+    <string name="title_notice_details">Notice Details</string>
+    <string name="date">&lt;b>Date:&lt;/b>&#160;%1$s</string>
+    <string name="prompt_search_notice">Search By Notice Title</string>
+    <string name="prompt_empty_notice">No Notice(s)</string>
+
+    <!--Official Communications-->
+    <string name="prompt_empty_communications">No Official Communication(s) found</string>
+    <string name="title_official_comm_details">Communication Details</string>
+    <string name="comm_letter">Letter</string>
+    <string name="placeholder_letter_to">&lt;b>To:&lt;/b>&#160;%1$s</string>
+    <string name="placeholder_letter_by">&lt;b>By:&lt;/b>&#160;%1$s</string>
+    <string name="placeholder_letter_subject">&lt;b>Subject:&lt;/b>&#160;%1$s</string>
+    <string name="placeholder_text">&lt;b>Text:&lt;/b>&#160;%1$s</string>
+    <string name="empty_state_comment">No Comment(s) found</string>
+    <string name="prompt_comm_comment">minimum 2 characters</string>
+
+    <!--Documents-->
+    <string name="document_category">&lt;b>Category:&lt;/b>&#160;%1$s</string>
+    <string name="uploaded_by">&lt;b>Uploaded By:&lt;/b>&#160;%1$s</string>
+    <string name="uploaded_on">&lt;b>Uploaded On:&lt;/b>&#160;%1$s</string>
+    <string name="document_status">Status : </string>
+    <string name="prompt_search_document">Search By Document Name</string>
+
+    <!--Bye Laws-->
+    <string name="appendix_1">Appendix-1</string>
+    <string name="appendix_2">Appendix-2</string>
+</resources>

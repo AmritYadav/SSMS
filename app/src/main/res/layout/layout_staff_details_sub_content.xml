@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="staff"
+            type="com.sts.ssms.ui.helpdesk.staff.model.StaffUiModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_type"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_type"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_type" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_created_by"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_created_by"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_created_by" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_belongs_to_society"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_belongs_to"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_belongs_to" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_gender"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_gender"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_gender" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_email"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_email"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_email" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_nationality"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_nationality"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_nationality" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_address"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_address"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_address" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_qualification"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_qualification"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_qualification" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_skills"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_skills"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_skills" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_languages_known"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_languages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_languages" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_first_reference"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_first_ref"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_first_ref" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_second_reference"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_second_ref"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_second_ref" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_staff_aadhaar_card"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_aadhaar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_aadhaar" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_staff_pan_card"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_pan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_pan" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/prompt_staff_description"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_staff_details_desc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_staff_details_desc" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.type}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_div_type"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_type" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_created_by"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.createdBy}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_type" />
+
+        <View
+            android:id="@+id/view_div_created_by"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_created_by" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_belongs_to"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.belongsTo}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_created_by" />
+
+        <View
+            android:id="@+id/view_div_belongs_to"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_belongs_to" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_gender"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.gender}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_belongs_to" />
+
+        <View
+            android:id="@+id/view_div_gender"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_gender" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_email"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.email}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_gender" />
+
+        <View
+            android:id="@+id/view_div_email"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_email" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_nationality"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.nationality}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_email" />
+
+        <View
+            android:id="@+id/view_div_nationality"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_nationality" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_languages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.language}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_nationality" />
+
+        <View
+            android:id="@+id/view_div_languages"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_languages" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.address}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_languages" />
+
+        <View
+            android:id="@+id/view_div_address"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_address" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_qualification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.qualification}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_address" />
+
+        <View
+            android:id="@+id/view_div_qualification"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_qualification" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_skills"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.skills}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_qualification" />
+
+        <View
+            android:id="@+id/view_div_skills"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_skills" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_first_ref"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.firstReference}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_skills" />
+
+        <View
+            android:id="@+id/view_div_first_ref"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_first_ref" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_second_ref"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.secondReference}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_first_ref" />
+
+        <View
+            android:id="@+id/view_div_second_ref"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_second_ref" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_aadhaar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.aadhaarCard}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_second_ref" />
+
+        <View
+            android:id="@+id/view_div_first_aadhaar"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_aadhaar" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_pan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.panCard}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_first_aadhaar" />
+
+        <View
+            android:id="@+id/view_div_first_pan"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_staff_details_pan" />
+
+        <TextView
+            android:id="@+id/tv_staff_details_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{staff.description}"
+            android:textColor="@android:color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_first_pan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

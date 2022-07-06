@@ -1,0 +1,113 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        applicationId names.applicationId
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode 3
+        versionName "1.2"
+
+        buildConfigField("String", "SSMS_DB_NAME", "\"ssms_db\"")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField("String", "SSMS_BASE_URL", "\"http://14.141.146.129:9898\"")
+            buildConfigField("int", "SSMS_DB_VERSION", '1')
+        }
+        release {
+            buildConfigField("String", "SSMS_BASE_URL", "\"https://api.sahakar.net\"")
+            buildConfigField("int", "SSMS_DB_VERSION", '1')
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // To inline the bytecode built with JVM target 1.8 into
+    // bytecode that is being built with JVM target 1.6. (e.g. navArgs)
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+
+    // AndroidX
+    implementation "androidx.appcompat:appcompat:${versions.appcompat}"
+    implementation "androidx.core:core-ktx:${versions.coreKtx}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:${versions.swipeToRefresh}"
+
+    // Architecture components
+    implementation "android.arch.paging:runtime:${versions.paging}"
+    implementation "android.arch.lifecycle:runtime:${versions.lifecycle}"
+    implementation "android.arch.lifecycle:extensions:${versions.lifecycle}"
+
+    // Material
+    implementation "com.google.android.material:material:${versions.material}"
+
+    // Coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
+
+    // Retrofit & Gson Converter
+    implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${versions.retrofit}"
+
+    // OkHttp Logging Interceptor
+    implementation "com.squareup.okhttp3:logging-interceptor:${versions.okhttp}"
+
+    // Glide
+    implementation "com.github.bumptech.glide:glide:${versions.glide}"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    kapt "com.github.bumptech.glide:compiler:${versions.glide}"
+
+    // NavigationView
+    implementation "androidx.navigation:navigation-fragment:${versions.navigation}"
+    implementation "androidx.navigation:navigation-ui:${versions.navigation}"
+    implementation "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
+
+    // Koin
+    implementation "org.koin:koin-android:${versions.koin}"
+    implementation "org.koin:koin-androidx-scope:${versions.koin}"
+    implementation "org.koin:koin-androidx-viewmodel:${versions.koin}"
+
+    // Room Database
+    implementation "androidx.room:room-runtime:${versions.room}"
+    kapt "androidx.room:room-compiler:${versions.room}"
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:${versions.room}"
+
+    // Joda Time
+    implementation "joda-time:joda-time:${versions.jodaTime}"
+
+    // Duolingo RTL ViewPager for Calendar
+    implementation "com.duolingo.open:rtl-viewpager:${versions.duolingoViewPager}"
+
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

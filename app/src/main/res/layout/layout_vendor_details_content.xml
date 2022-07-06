@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vendorModel"
+            type="com.sts.ssms.ui.helpdesk.vendor.model.VendorUiModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/tv_vendor_details_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/header"
+            android:text="@{vendorModel.name}"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/vendor_details_category"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vendor_details_category_val"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_vendor_details_category_val" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/vendor_details_contact"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vendor_details_contact_val"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_vendor_details_contact_val" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/vendor_details_website"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vendor_details_website_val"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_vendor_details_website_val" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/vendor_details_email"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vendor_details_email_val"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_vendor_details_email_val" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/vendor_details_rating"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/rating_vendor_details_rating_val"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rating_vendor_details_rating_val" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/vendor_details_status"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vendor_details_status_val"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_vendor_details_status_val" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/vendor_details_info"
+            android:textColor="@color/input_outbox_stroke"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vendor_details_info_val"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_vendor_details_info_val" />
+
+        <TextView
+            android:id="@+id/tv_vendor_details_category_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{vendorModel.categoryName}"
+            android:textColor="@color/input_outbox_stroke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendor_details_name" />
+
+        <View
+            android:id="@+id/view_div_name"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendor_details_category_val" />
+
+        <TextView
+            android:id="@+id/tv_vendor_details_contact_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{vendorModel.phoneNumber}"
+            android:textColor="@color/input_outbox_stroke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_name" />
+
+        <View
+            android:id="@+id/view_div_contact"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendor_details_contact_val" />
+
+        <TextView
+            android:id="@+id/tv_vendor_details_website_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="5dp"
+            android:text="@{vendorModel.website}"
+            android:textColor="@color/input_outbox_stroke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_contact" />
+
+        <View
+            android:id="@+id/view_div_website"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendor_details_website_val" />
+
+        <TextView
+            android:id="@+id/tv_vendor_details_email_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@{vendorModel.email}"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/input_outbox_stroke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_website" />
+
+        <View
+            android:id="@+id/view_div_email"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendor_details_email_val" />
+
+        <RatingBar
+            android:id="@+id/rating_vendor_details_rating_val"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="2dp"
+            android:progressTint="@color/colorPrimary"
+            android:rating="@{vendorModel.overallRating}"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_email" />
+
+        <View
+            android:id="@+id/view_div_rating"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/rating_vendor_details_rating_val" />
+
+        <TextView
+            android:id="@+id/tv_vendor_details_status_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@{vendorModel.status}"
+            android:textColor="@color/input_outbox_stroke"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_rating" />
+
+        <View
+            android:id="@+id/view_div_status"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/tab_background_dark_300"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vendor_details_status_val" />
+
+        <TextView
+            android:id="@+id/tv_vendor_details_info_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@{vendorModel.info}"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/input_outbox_stroke"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline_horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/view_div_status" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
